@@ -33,10 +33,12 @@ class MakeAppointment {
 		driver.findElement(By.xpath("//*[@id=\"txt_comment\"]")).sendKeys("Hello World");
 		driver.findElement(By.xpath("//*[@id=\"btn-book-appointment\"]")).click();
 		String result = driver.findElement(By.id("comment")).getText();
-		if(result.equalsIgnoreCase("Hello World"))
-			System.out.println("Pass");
-		else
-			System.out.println("Fail");
+//		if(result.equalsIgnoreCase("Hello World"))
+//			System.out.println("Pass");
+//		else
+//			System.out.println("Fail");
+
+		assertEquals("Hello World", result);
 		
 		Thread.sleep(4000);
         driver.quit();
